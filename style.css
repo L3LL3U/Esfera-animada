@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;700&display=swap');
+
+body {
+    margin: 0;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    background: radial-gradient(circle, #2c3e50 0%, #000000 100%);
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.interface {
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    pointer-events: none;
+    z-index: 10;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: #3498db;
+    text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    transition: opacity 0.3s;
+}
+
+.stats {
+    display: flex;
+    gap: 20px;
+}
+
+.stat-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 80px;
+}
+
+.label {
+    display: block;
+    font-size: 0.6rem;
+    color: #bdc3c7;
+}
+
+.value {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.5rem;
+    color: #f1c40f;
+}
+
+.esfera {
+    width: 200px;
+    height: 200px;
+    background-color: #3498db;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    /* Removido o transform: translate daqui para evitar o bug */
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: inset -20px -20px 60px rgba(0,0,0,0.6), 
+                0 0 40px rgba(52, 152, 219, 0.3);
+}
+
+.esfera:active {
+    transform: scale(0.9);
+}
